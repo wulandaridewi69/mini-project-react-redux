@@ -21,7 +21,13 @@ module.exports =  (env, options)=> {
             path: path.resolve(__dirname, './dist'),
             filename: '[name].[contenthash].js',
             chunkFilename: '[name].[contenthash].js',
-            clean: true
+            publicPath: '/',
+            clean: true,
+        },
+        devServer: {
+            historyApiFallback: true,
+            contentBase: './',
+            hot: true
         },
         devtool: 'source-map',
         resolve: {
