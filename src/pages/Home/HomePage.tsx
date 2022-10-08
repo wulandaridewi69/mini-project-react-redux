@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { ErrorBoundary } from '../../components';
-import Logo from '../../assets/IconLogo.png'
+import Logo from '../../assets/getplus.png'
 
 const HomePage = () => {
 

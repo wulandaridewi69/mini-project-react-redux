@@ -5,9 +5,6 @@ import {
     // createAsyncThunk
 } from '@reduxjs/toolkit';
 
-// import { RootState, StoreDispatch, StoreGetState } from '../configureStore';
-import { WEB_MAP_ID } from '../../constants/constants'
-
 
 // All data redux saved as object here (reducers.ts)
 
