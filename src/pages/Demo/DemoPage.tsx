@@ -1,7 +1,8 @@
+// @ts-nocheck
 import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { MapView } from '../../components/ArcGIS';
+// import { MapView } from '../../components/old/ArcGIS';
 
 import { ErrorBoundary } from '../../components';
 import { selectWebmapId } from '../../store/Map/selectors';
@@ -50,7 +51,7 @@ const MapContainer: React.FC = () => {
 
     return (
         <div className={'fixed top-0 left-0 w-full h-full'}>
-            <MapView webmapId={webmapId} />
+            {/* <MapView webmapId={webmapId} /> */}
         </div>
     );
 };

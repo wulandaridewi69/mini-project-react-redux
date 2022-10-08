@@ -26,7 +26,7 @@ module.exports =  (env, options)=> {
         },
         devServer: {
             historyApiFallback: true,
-            contentBase: './',
+            // contentBase: './',
             hot: true
         },
         devtool: 'source-map',

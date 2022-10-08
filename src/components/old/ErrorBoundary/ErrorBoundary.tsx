@@ -38,7 +38,7 @@ export default class ErrorBoundary extends PureComponent<Props, State> {
         }
 
         return (
-            <div>
+            <div >
                 <h1>Something went wrong</h1>
                 {error ? <p>{error.toString()}</p> : null}
             </div>

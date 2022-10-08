@@ -4,14 +4,14 @@
         "allowJs": false,
         "jsx": "react",
         "module": "commonjs",
-        "noImplicitAny": true,
+        "noImplicitAny": false,
         "preserveConstEnums": true,
-        "removeComments": true,
+        "removeComments": false,
         "sourceMap": false,
         "target": "es5",
         "resolveJsonModule": true,
         "esModuleInterop": true ,
-        "suppressImplicitAnyIndexErrors": true,
+        "suppressImplicitAnyIndexErrors": false,
         "typeRoots": [  
             "./src/types", 
             "./node_modules/@types"

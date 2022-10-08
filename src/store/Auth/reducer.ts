@@ -11,27 +11,27 @@ import { WEB_MAP_ID } from '../../constants/constants'
 
 // All data redux saved as object here (reducers.ts)
 
-export type MapState = {
-    // ArcGIS Online Webmap Item Id
-    webmapId?: string;
+export type AuthState = {
+    token?: string;
 };
 
-export const initialMapState: MapState = {
-    webmapId: WEB_MAP_ID, // Topographic
+export const initialAuthState: AuthState = {
+    token: '',
 };
 
 const slice = createSlice({
-    name: 'Map',
-    initialState: initialMapState,
+    name: 'Auth',
+    initialState: initialAuthState,
     reducers: {
-        webmapIdChanged: (state, action: PayloadAction<string>) => {
-            state.webmapId = action.payload;
+        tokenChanged: (state, action: PayloadAction<string>) => {
+            console.log("state, action", state.token, action)
+            state.token = action.payload;
         },
     },
 });
 
 const { reducer } = slice;
 
-export const { webmapIdChanged } = slice.actions;
+export const { tokenChanged } = slice.actions;
 
 export default reducer;

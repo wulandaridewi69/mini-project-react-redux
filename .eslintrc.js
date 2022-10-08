@@ -22,7 +22,7 @@ module.exports = {
         'prettier'
     ],
     "rules": {
-        'prettier/prettier': 'error',
+        'prettier/prettier': 'off',
         "@typescript-eslint/interface-name-prefix": "off"
     }
 }
