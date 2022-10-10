@@ -1,12 +1,13 @@
 // @ts-nocheck
 import React from "react";
 
+import Button from '../button/Button'
+
 
 const Card = (props) => {
 
   return (
     <div className="border-1 drop-shadow-xl hover:shadow-md hover:shadow-gray-400 hover:-mt-1 mb-8">
-      <div className="">
         <div className="h-96 justify-center cursor-pointer">
           <a href={`/${props.id}`}>
             <img
@@ -24,7 +25,6 @@ const Card = (props) => {
             <div className="text-white text-xs">{props.preview}</div>
           </div>
         </div>
-      </div>
     </div>
   );
 };
