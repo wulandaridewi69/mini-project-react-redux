@@ -37,7 +37,7 @@ export const fetchLogin =
                         dispatch(tokenChanged(token));
                     })
                     .catch(error => alert(error));
-            } catch (err) {
-                console.error(err);
+            } catch (error) {
+                console.error(error);
             }
         };
