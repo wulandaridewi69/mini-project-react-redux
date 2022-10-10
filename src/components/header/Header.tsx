@@ -22,7 +22,7 @@ const Header = () => {
           <div className="flex flex-row items-center justify-center ">
             <button type="button">
               <div className="mr-3" onClick={handleModal}>
-                <Image
+                <img
                   src={LOGO}
                   alt="Picture of the author"
                   width={30}

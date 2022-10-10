@@ -34,10 +34,10 @@ const HomePage = () => {
     }
 
     const showMoreItem = () => {
-        setProduct((prevValue) => prevValue + 10);
+        setProduct((prevValue) => prevValue + 9);
     }
 
-    const showLessItem = () => {}
+
 
 
     return (
@@ -45,7 +45,7 @@ const HomePage = () => {
             <div className='container'>
                 <div className='row'>
                     {articles.slice(0, product).map((item) => (
-                        <div className='col-md-4'>
+                        <div className='col-md-4 '>
                             <Card
                                 key={item.id}
                                 id={item.id}
