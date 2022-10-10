@@ -1,11 +1,8 @@
 // @ts-nocheck
-import React, { useState, useContext } from "react";
-import WidgetsIcon from '@mui/icons-material/Widgets';
-import Logo from '../assets/logo.png'
+import React from "react";
+
 
 const Header = () => {
-
-  const [loading, setLoading] = useState(false);
 
   const handleModal = () => {
     setShowModal(!showModal);
@@ -16,16 +13,13 @@ const Header = () => {
       <nav className="sticky top-0 w-full px-2 py-2.5 bg-white flex justify-between drop-shadow-lg z-10">
         <div className="flex items-center font-bold text-2xl ml-10 text-[#085E7D]">
           <a id="to-homepage" href="/">
-            <Logo/>
+            <div className='pt-12 pb-16 pl-32'>
+              <img src='https://www.mygetplus.id/assets/images/getplus.svg' />
+            </div>
           </a>
         </div>
         {token !== "0" && (
           <div className="flex flex-row items-center justify-center ">
-            <button type="button">
-              <div className="text-white mr-3" onClick={handleCreate}>
-                <WidgetsIcon />
-              </div>
-            </button>
             <button type="button">
               <div className="mr-3" onClick={handleModal}>
                 <Image
@@ -57,7 +51,7 @@ const Header = () => {
                   My List
                 </a>
               </a>
-            </li>   
+            </li>
             <li>
               <a href="/">
                 <a
@@ -67,7 +61,7 @@ const Header = () => {
                   Home
                 </a>
               </a>
-            </li>          
+            </li>
           </ul>
         </div>
       )}

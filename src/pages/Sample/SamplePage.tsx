@@ -56,7 +56,7 @@ const MapContainer: React.FC = () => {
     );
 };
 
-const DemoPage = () => {
+const SamplePage = () => {
     return (
         <>
             <ErrorBoundary>
@@ -67,4 +67,4 @@ const DemoPage = () => {
     );
 };
 
-export default DemoPage;
+export default SamplePage;

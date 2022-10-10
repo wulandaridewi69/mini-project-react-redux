@@ -1,35 +1,66 @@
 // @ts-nocheck
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
 
-import { ErrorBoundary } from '../../components';
-import Logo from '../../assets/IconLogo.png'
+import Logo from '../../assets/getplus.png';
+import Card from '../../components/card/Cards';
+import Layout from '../../components/layout/Layout';
+import Button from '../../components/button/Button';
 
 const HomePage = () => {
 
+    const [articles, setArticles] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [product, setProduct] = useState(9)
+
+    useEffect(() => {
+        fetchAllArticles();
+    }, []);
+
+    const fetchAllArticles = () => {
+        let requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+        fetch("https://62d5368fd4406e5235558a46.mockapi.io/articles", requestOptions)
+            .then(response => response.json())
+            .then(result => {
+                setArticles(result);
+            })
+            .catch(error => alert(error))
+            .finally(loading => setLoading(false));
+    }
+
+    const showMoreItem = () => {
+        setProduct((prevValue) => prevValue + 10);
+    }
+
+    const showLessItem = () => {}
+
+
     return (
-        <ErrorBoundary>
-            <div className='bg-gray-900 text-gray-900 pt-32 pl-80'>
-                <img src={Logo} alt="fireSpot" className='pl-48' />
-                <div className='flex grid-rows-3 gap-6 text-center text-4xl pt-4 pb-44'>
-                    <div className='border rounded-t-lg border-teal-500 pl-12 hover:bg-teal-500 bg-white pr-12 pt-12 pb-12 font-bold'>
-                        <Link to='/login'>
-                            <h3>Admin</h3>
-                        </Link>
-                    </div>
-                    <div className='border rounded-t-lg border-teal-500 hover:bg-teal-500 bg-white pl-12 pr-12 pt-12 pb-12 font-bold'>
-                        <Link to='/login'>
-                        <h3>Tentor</h3>
-                        </Link>
-                    </div>
-                    <div className='border rounded-t-lg border-teal-500 hover:bg-teal-500 bg-white pl-12 pr-12 pt-12 pb-12 font-bold'>
-                        <Link to='/login'>
-                        <h3>Student</h3>
-                        </Link>
-                    </div>
+        <Layout>
+            <div className='container'>
+                <div className='row'>
+                    {articles.slice(0, product).map((item) => (
+                        <div className='col-md-4'>
+                            <Card
+                                key={item.id}
+                                id={item.id}
+                                image={item.image}
+                                title={item.title}
+                                preview={item.previewContent}
+                            />
+                        </div>
+                    ))}
                 </div>
             </div>
-        </ErrorBoundary>
+            <div className='ml-72 pl-72 pb-12'>
+                <Button className='pl-10 pr-10 font-bold bg-yellow-600 hover:bg-white rounded-full' onClick={showMoreItem}>View More</Button>
+            </div>
+        </Layout>
     );
 };
 

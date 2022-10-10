@@ -1,17 +1,17 @@
 // @ts-nocheck
 import React from "react";
 
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from "../footer/Footer";
+import Header from "../header/Header";
 
 const Layout = (props) => {
     
   return (
-    <>
-      <Header />
+    <div className="bg-gray-900">
+      {/* <Header /> */}
       {props.children}
       <Footer/>
-    </>
+    </div>
   )
 }
 
