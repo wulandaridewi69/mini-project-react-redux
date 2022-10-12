@@ -81,7 +81,8 @@ Pada Article ini user dapat melihat article. Selain itu User juga dapat membuat 
 
 ### Contact
 
-[![GitHub Azis](https://img.shields.io/badge/-Azis-white?style=flat&logo=github&logoColor=black)](https://github.com/mohamadazisadnan)
-[![LinkedIn Azis](https://img.shields.io/badge/-Azis-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/azisadnn/)
+[![GitHub Wanda](https://img.shields.io/badge/-Wanda-white?style=flat&logo=github&logoColor=black)](https://github.com/wulandaridewi69)
+[![LinkedIn Wanda](https://img.shields.io/badge/-Wanda-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/dewi-wulandari-970590136/)
+
 
 
