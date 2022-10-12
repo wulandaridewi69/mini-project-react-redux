@@ -67,14 +67,14 @@
   
 Pada Article ini user dapat melihat article. Selain itu User juga dapat membuat comment ruangan sendiri yang nantinya dapat ditampilkan pada detail artikel pada bagian feedback. 
   
-| Feature Products | Endpoint | Param |  Fungsi |
+| Feature Products | Endpoint | Param | Fungsi |
 | --- | --- | --- | --- | --- |
 | GET | /articles | page, title |  Mendapatkan informasi seluruh article |
 | GET | /articles/:id | id |  Mendapatkan informasi article berdasarkan id-article |
-| GET | /articles/:id/comments/ | - |  Melakukan update comment berdasarkan id_article |
-| POST | /articles/:id/comments/ | - |  Membuat comment pada section feedback berdasarkan id_room |
+| GET | /rooms | - |  Melakukan update comment berdasarkan id_article |
+| POST | /articles/:id/comments/ | id |  Membuat comment pada section feedback berdasarkan id_room |
 | DEL | /articles/:id/comments/:id | id |  Melakukan delete comment berdasarkan id_rooms |
-| GET | /banners | no |  Menampilkan banner |
+| GET | /banners | -|  Menamplikan banner |
 
 </details>
 
