@@ -5,7 +5,7 @@
 <div align="center">
 <!--  mengarah ke repo  -->
   <a href="https://github.com/wulandaridewi69/mini-project-react-redux">
-    <img src="https://gitlab.com/davidwahyup/asset-blog/-/raw/main/images/2022/image/MN_Room.png" width="150" height="150">
+    <img src="https://github.com/wulandaridewi69/mini-project-react-redux/blob/develop/src/assets/cover.png" >
   </a>
 
 <h3 align="center">Article</h3>
