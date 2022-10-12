@@ -69,7 +69,7 @@ Pada Article ini user dapat melihat article. Selain itu User juga dapat membuat 
   
 | Feature Products | Endpoint | Param | Fungsi |
 | --- | --- | --- | --- | --- |
-| GET | /articles | page, title |  Mendapatkan informasi seluruh article |
+| GET | /articles | page |  Mendapatkan informasi seluruh article |
 | GET | /articles/:id | id |  Mendapatkan informasi article berdasarkan id-article |
 | GET | /rooms | - |  Melakukan update comment berdasarkan id_article |
 | POST | /articles/:id/comments/ | id |  Membuat comment pada section feedback berdasarkan id_room |
