@@ -1,13 +1,12 @@
-
+// @ts-nocheck
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { 
-  // SamplePage, 
   HomePage, 
   NotFoundPage, 
   LoginPage, 
-  SamplePage, // for sample
+  DetailPage, 
 } from './../pages';
 
 const MainRoute = () => {
@@ -15,10 +14,8 @@ const MainRoute = () => {
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<HomePage/>} />
-            {/* <Route path="/demo" element={<SamplePage/>} /> */}
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/sample/:id" element={<SamplePage />} />
-            <Route path="*" element={<NotFoundPage />} />
+            <Route path="/detail/:id" element={<DetailPage />} />
         </Routes>
     </BrowserRouter>
   );
