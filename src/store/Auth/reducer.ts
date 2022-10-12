@@ -1,19 +1,17 @@
 import {
     createSlice,
-    // createSelector,
     PayloadAction,
-    // createAsyncThunk
 } from '@reduxjs/toolkit';
 
 
-// All data redux saved as object here (reducers.ts)
-
 export type AuthState = {
-    token?: string;
+    token?: string,
+    username?: string,
 };
 
 export const initialAuthState: AuthState = {
     token: '',
+    username: '',
 };
 
 const slice = createSlice({
@@ -24,11 +22,15 @@ const slice = createSlice({
             console.log("state, action", state.token, action)
             state.token = action.payload;
         },
+        usernameChanged: (state, action: PayloadAction<string>) => {
+            console.log("state, action", state.username, action)
+            state.username = action.payload;
+        },
     },
 });
 
 const { reducer } = slice;
 
-export const { tokenChanged } = slice.actions;
+export const { tokenChanged, usernameChanged } = slice.actions;
 
 export default reducer;

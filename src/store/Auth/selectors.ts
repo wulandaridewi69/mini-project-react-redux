@@ -6,3 +6,7 @@ export const selectToken = createSelector(
     (state: RootState) => state.Auth.token,
     (token) => token
 );
+export const selectUsername = createSelector(
+    (state: RootState) => state.Auth.username,
+    (username) => username
+);

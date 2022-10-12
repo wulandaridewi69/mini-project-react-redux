@@ -1,6 +1,8 @@
+// @ts-nocheck
 import { List } from 'reselect/es/types';
 import { RootState, StoreDispatch, StoreGetState } from '../configureStore';
 import { tokenChanged } from './reducer';
+import { usernameChanged } from './reducer';
 
 import { URL_API } from '../../constants/constants'
 
@@ -35,6 +37,7 @@ export const fetchLogin =
                         console.log("result", result)
                         token = result.result;
                         dispatch(tokenChanged(token));
+                        dispatch(usernameChanged(auth.username));
                     })
                     .catch(error => alert(error));
             } catch (error) {

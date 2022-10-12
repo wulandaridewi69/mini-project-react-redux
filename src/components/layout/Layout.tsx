@@ -8,7 +8,7 @@ const Layout = (props) => {
     
   return (
     <div className="bg-gray-900">
-      {/* <Header /> */}
+      <Header />
       {props.children}
       <Footer/>
     </div>

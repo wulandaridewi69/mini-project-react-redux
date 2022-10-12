@@ -1,70 +1,43 @@
 // @ts-nocheck
-import React from "react";
+import React, { useState } from "react";
+
+import Button from "../button/Button";
+import SearchIcon from '@mui/icons-material/Search';
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { fetchArticles } from "../../store/Home/thunks";
 
 
 const Header = () => {
 
-  const handleModal = () => {
-    setShowModal(!showModal);
-  };
+  const [search, setSearch] = useState('');
+  
+  const dispatch = useDispatch();
+  
+  const handleSearch = () => {
+    dispatch(fetchArticles(search));
+  }
 
   return (
     <>
-      <nav className="sticky top-0 w-full px-2 py-2.5 bg-white flex justify-between drop-shadow-lg z-10">
-        <div className="flex items-center font-bold text-2xl ml-10 text-[#085E7D]">
-          <a id="to-homepage" href="/">
-            <div className='pt-12 pb-16 pl-32'>
-              <img src='https://www.mygetplus.id/assets/images/getplus.svg' />
+      <nav className="bg-cyan-900 pb-2 pt-2 sticky top-0 w-full rounded-b-3xl justify-between drop-shadow-lg z-10">
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <a id="to-homepage" href="/">
+                <img src='https://www.mygetplus.id/assets/images/getplus.svg' />
+              </a>
             </div>
-          </a>
-        </div>
-        {token !== "0" && (
-          <div className="flex flex-row items-center justify-center ">
-            <button type="button">
-              <div className="mr-3" onClick={handleModal}>
-                <img
-                  src={LOGO}
-                  alt="Picture of the author"
-                  width={30}
-                  height={30}
-                />
+            <div className="col-sm-6 col-md-6 col-lg-6 col-xl-6 flex">
+              <input class="form-control " type="search" placeholder="Search" onChange={(e) => setSearch(e.target.value)} />
+              <div class="bg-yellow-600 border rounded pl-2 pr-2 pt-1">
+                <Button type="submit" onClick={handleSearch}><SearchIcon /></Button>
               </div>
-            </button>
+            </div>
           </div>
-        )}
-      </nav>
-      {showModal && (
-        <div
-          id="dropdownDivider"
-          className="z-10 fixed bg-sky-900 divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600 right-7 top-16"
-        >
-          <ul
-            className="py-1 text-sm text-white dark:text-black"
-            aria-labelledby="dropdownDividerButton"
-          >
-            <li>
-              <a href="/List">
-                <a
-                  id="btnList"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  My List
-                </a>
-              </a>
-            </li>
-            <li>
-              <a href="/">
-                <a
-                  id="home"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                >
-                  Home
-                </a>
-              </a>
-            </li>
-          </ul>
         </div>
-      )}
+
+      </nav>
     </>
   );
 }
