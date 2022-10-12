@@ -5,7 +5,7 @@
 <div align="center">
 <!--  mengarah ke repo  -->
   <a href="https://github.com/wulandaridewi69/mini-project-react-redux">
-    <img src="https://github.com/wulandaridewi69/mini-project-react-redux/blob/develop/src/assets/cover.png" >
+    <img src="https://github.com/wulandaridewi69/mini-project-react-redux/blob/develop/src/assets/cover.png">
   </a>
 
 <h3 align="center">Article</h3>
@@ -53,94 +53,35 @@
   
 | Feature User | Endpoint | Param | JWT Token | Fungsi |
 | --- | --- | --- | --- | --- |
-| POST | /signup  | - | NO | Melakukan proses registrasi user |
 | POST | /login | - | NO | Melakukan proses login user |
-| GET | /users | - | YES | Mendapatkan informasi daftar user terdaftar |
-| PUT | /users | - | YES | Melakukan update profile user yang sedang login | 
-| DEL | /users | - | YES | Menghapus user yang sedang login |
 
 </details>  
 
 <details>
-<summary>🛍 &nbsp;Room</summary>
+<summary>🛍 &nbsp;Article</summary>
   
   <!---
   | Command | Description |
 | --- | --- |
   --->
   
-Pada Room ini user dapat melihat beberapa daftar ruangan dan detail ruangan yang disewakan. Selain itu User juga dapat membuat profile ruangan sendiri yang nantinya akan disewakan. Terdapat beberapa fitur tambahan pada **Room** ini, yaitu *facility* dan *categories* yang bertujuan untuk mengelompokkan ruangan dengan berdasarkan kategori dan menampikan fasilitas yang ada pada ruangan tersebut. Sehingga memudahkan User untuk menentukan pilihan ketika hendak menyewa ruangan.
+Pada Article ini user dapat melihat article. Selain itu User juga dapat membuat comment ruangan sendiri yang nantinya dapat ditampilkan pada detail artikel pada bagian feedback. 
   
-| Feature Products | Endpoint | Param | JWT Token | Fungsi |
+| Feature Products | Endpoint | Param |  Fungsi |
 | --- | --- | --- | --- | --- |
-| POST | /rooms  | - | YES | Membuat rooms profile baru |
-| GET | /rooms | - | YES | Mendapatkan informasi seluruh product user yang sedang login |
-| GET | /rooms/:id | id | NO | Mendapatkan informasi rooms berdasarkan id-rooms |
-| PUT | /rooms | - | YES | Melakukan update profile informasi room |
-| GET | /user/rooms | id | NO | Mendapatkan informasi rooms yang terlah dibuat oleh user. |
-| DEL | /rooms/:id | id | YES | Melakukan delete rooms tertentu berdasarkan id rooms |
+| GET | /articles | page, title |  Mendapatkan informasi seluruh article |
+| GET | /articles/:id | id |  Mendapatkan informasi article berdasarkan id-article |
+| GET | /articles/:id/comments/ | - |  Melakukan update comment berdasarkan id_article |
+| POST | /articles/:id/comments/ | - |  Membuat comment pada section feedback berdasarkan id_room |
+| DEL | /articles/:id/comments/:id | id |  Melakukan delete comment berdasarkan id_rooms |
+| GET | /banners | no |  Menampilkan banner |
 
 </details>
 
-
-<details>
-<summary>🛒 &nbsp;Rent</summary>
-  
-  <!---
-  | Command | Description |
-| --- | --- |
-  --->
-Cart merupakan fitur untuk menampung berbagai product yang akan dibeli oleh user, adapun fiturnya ada GET dimana user bisa melihat barang apa aja yang ada di dalam keranjang, ada fitur history dimana user bisa melihat jumlah product yang sudah dibayar.
-  
-| Feature cart | Endpoint | Param | JWT Token | Fungsi |
-| --- | --- | --- | --- | --- |
-| POST | /rents | - | YES | Melakukan sewa pada sebuah rooms |
-| GET | /rents | - | YES | Mendapatkan informasi sewa yang telah dilakukan |
-
-</details>
-
-<details>
-<summary>🗓&nbsp;Payments</summary>
-  
-  <!---
-  | Command | Description |
-| --- | --- |
-  --->
-Merupakan fitur untuk dimana user melakukan pembayaran sesuai sewa room yang dipilih. Mode pembayaran ini menggunakan payment gateway yang disediakan oleh xendit, payment_method yang digunakan pada MN-Room yaitu pembayaran melalui BANK BCA dan BNI. 
-  
-| Feature booking | Endpoint | Param | JWT Token | Fungsi |
-| --- | --- | --- | --- | --- |
-| GET | /payments | id | YES | Mendapatkan informasi pembayaran berdasarkan rent id |
-| POST | /payments/status | - | NO | Membuat pembayaran sewa ruang |
-
-</details>
-
-
-<details>
-<summary>📈&nbsp;ERD</summary>
-<img src="./erd/ERD-MNroom.jpg">
-</details>  
 
 ### Contact
 
 [![GitHub Azis](https://img.shields.io/badge/-Azis-white?style=flat&logo=github&logoColor=black)](https://github.com/mohamadazisadnan)
 [![LinkedIn Azis](https://img.shields.io/badge/-Azis-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/azisadnn/)
 
-[![GitHub David](https://img.shields.io/badge/-David-white?style=flat&logo=github&logoColor=black)](https://github.com/davidwah)
-[![LinkedIn David](https://img.shields.io/badge/-David-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/david-wahyu-pratomo/)
 
-[![GitHub Mulya](https://img.shields.io/badge/-Mulya-white?style=flat&logo=github&logoColor=black)](https://github.com/mulyanurdin10)
-[![LinkedIn Mulya](https://img.shields.io/badge/-Mulya-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/mulya-nurdin-473807246/)
-
-
-# React-Redux Boilerplate
-
-The Boilerplate to start React+Redux project with TypeScript in an easier and faster way. 
-
-## Features
-
-- React
-- Redux
-- TypeScript
-- Tailwind
-- MUI
